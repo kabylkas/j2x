@@ -17,4 +17,5 @@ class xjx {
     xjx() = default;
     tinyxml2::XMLError read_xml(const char* file_name);
     tinyxml2::XMLError write_xml(const char* file_name);
+    bool operator==(const xjx& other_xjx);
 };
