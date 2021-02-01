@@ -1,3 +1,0 @@
-/home/kabylkas/j2x/build/CMakeFiles/rebuild_cache.dir
-/home/kabylkas/j2x/build/CMakeFiles/xjx.dir
-/home/kabylkas/j2x/build/CMakeFiles/edit_cache.dir

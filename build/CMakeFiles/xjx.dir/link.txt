@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++1z -g  -rdynamic CMakeFiles/xjx.dir/src/main.cpp.o CMakeFiles/xjx.dir/src/xjx.cpp.o CMakeFiles/xjx.dir/extlibs/tinyxml2.cpp.o  -o xjx 
