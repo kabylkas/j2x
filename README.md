@@ -1,2 +1,2 @@
-# j2x
-This is simplistic json-xml-json converter written in C++.
+# xjx: xml->json->xml converter
+This is simplistic xml-json-xml converter written in C++.
