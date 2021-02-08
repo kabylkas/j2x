@@ -18,11 +18,14 @@ set (EXTLIB_CPP
 )
 
 set (SRC_H
+  ${SRC_DIR}/defines.h
   ${SRC_DIR}/xjx.h
+  ${SRC_DIR}/xml_iterator.h
 )
 
 set (SRC_CPP
   ${SRC_DIR}/xjx.cpp
+  ${SRC_DIR}/xml_iterator.cpp
 )
 
 add_executable(xjx ${SRC_DIR}/main.cpp ${SRC_H} ${SRC_CPP} ${EXTLIB_H} ${EXTLIB_CPP})
