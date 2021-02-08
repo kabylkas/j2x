@@ -16,15 +16,8 @@ tinyxml2::XMLError xjx::write_xml(const char* file_name) {
 
 bool xjx::operator==(const xjx& other_xjx) {
 
+
   return true;
-}
-
-xml_iterator xjx::begin() {
-  return this->first;
-}
-
-xml_iterator xjx::end() {
-  return this->last;
 }
 
 void xjx::print_all_nodes() {
