@@ -1,8 +1,10 @@
 #pragma once
 #include <sstream>
 #include "tinyxml2.h"
+#include "json.hpp"
 
 using xml_elem = tinyxml2::XMLElement;
+using json = nlohmann::json;
 
 template <typename T>
 void assert_equal(T a, T b, int line) {

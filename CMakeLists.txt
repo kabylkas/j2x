@@ -11,6 +11,7 @@ include_directories(${EXTLIB_DIR})
 
 set (EXTLIB_H
   ${EXTLIB_DIR}/tinyxml2.h
+  ${EXTLIB_DIR}/json.hpp
 )
 
 set (EXTLIB_CPP

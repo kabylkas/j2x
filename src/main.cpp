@@ -1,6 +1,9 @@
 #include "xjx.h"
+#include "json.hpp"
 #include "xml_iterator.h"
 #include <iostream>
+#include <fstream>
+#include <iomanip>
 
 int main() {
   xjx x2x;
@@ -16,5 +19,11 @@ int main() {
     std::cerr << "XMLs are NOT equal\n";
   }
 
+  json j;
+  std::ifstream i("../data/test1.json");
+  i >> j;
+
+  std::ofstream o("../data/test1_out.json");
+  o << std::setw(4) << j << "\n";
   return 0;
 }
