@@ -4,7 +4,11 @@
 #include "json.hpp"
 
 using xml_elem = tinyxml2::XMLElement;
+using xml_document = tinyxml2::XMLDocument;
+using xml_node = tinyxml2::XMLNode;
+
 using json = nlohmann::json;
+using json_type = nlohmann::basic_json<>::value_t;
 
 template <typename T>
 void assert_equal(T a, T b, int line) {
