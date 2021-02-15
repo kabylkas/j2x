@@ -16,8 +16,8 @@ class xjx {
 
   public:
     xjx() = default;
-    tinyxml2::XMLError read_xml(const char* file_name);
-    tinyxml2::XMLError write_xml(const char* file_name);
+    bool read_xml(const char* file_name);
+    bool write_xml(const char* file_name);
     bool read_json(const char* file_name); 
     //bool write_json(const char* file_name); 
     xml_elem* get_root_xml_node() const;

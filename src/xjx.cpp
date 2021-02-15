@@ -3,16 +3,18 @@
 #include <sstream>
 #include "xjx.h"
 
-tinyxml2::XMLError xjx::read_xml(const char* file_name) {
-  tinyxml2::XMLError err = this->xml_doc.LoadFile(file_name);
+bool xjx::read_xml(const char* file_name) {
+  auto err = this->xml_doc.LoadFile(file_name);
   if (err == tinyxml2::XML_SUCCESS) {
     this->root_xml_node = xml_doc.FirstChildElement();
+    return true;
   }
-  return err;
+  return false;
 }
 
-tinyxml2::XMLError xjx::write_xml(const char* file_name) {
-  return this->xml_doc.SaveFile(file_name);
+bool xjx::write_xml(const char* file_name) {
+  auto err = this->xml_doc.SaveFile(file_name);
+  return (err == tinyxml2::XML_SUCCESS);
 }
 
 bool xjx::read_json(const char* file_name) {

@@ -1,0 +1,4 @@
+1. implement xml-to-json
+2. make bool return from read and write xml
+3. implement json_write
+

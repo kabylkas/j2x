@@ -1,5 +1,6 @@
 #pragma once
 #include <sstream>
+#include <stdexcept>
 #include "tinyxml2.h"
 #include "json.hpp"
 
@@ -8,20 +9,18 @@ using xml_document = tinyxml2::XMLDocument;
 using xml_node = tinyxml2::XMLNode;
 
 using json = nlohmann::json;
-using json_type = nlohmann::basic_json<>::value_t;
 
-template <typename T>
-void assert_equal(T a, T b, int line) {
-  if (a != b) {
+static void should_be_true(bool b, int line) {
+  if (!b) {
     std::stringstream ss;
-    ss << "Assert on line " << line << " failed!\n";
-    std::runtime_error(ss.str());
+    ss << "should_be_true() on line " << line << " failed!\n";
+    throw std::runtime_error(ss.str());
   }
 }
 
-#define XML_CHECK(xml_func_result)\
-  if (xml_func_result != tinyxml2::XML_SUCCESS) {\
-    throw std::runtime_error("XML function was not successful");\
+#define I(a) try {\
+    should_be_true(a, __LINE__);\
+  } catch (std::exception& e) {\
+    std::cerr << e.what() << std::endl;\
+    exit(1);\
   }
-
-#define ASSERT(a, b) assert_equal(a, b, __LINE__);
